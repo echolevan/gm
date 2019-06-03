@@ -85,12 +85,12 @@ class TestController extends Controller
     
     public function test() {
         $mateData = new MateData('cab9778341284786980f1f76ac5accbf', 'sa8b9p8nc3urnhkn197hi2syw81kibsa');
-        return $mateData->auth('刘为锦','362426199109057730','18770609516');
+        return $mateData->auth('雷斐','420114199204302813','18571874104');
     }
 
     public function getData() {
         $mateData = new MateData('cab9778341284786980f1f76ac5accbf', 'sa8b9p8nc3urnhkn197hi2syw81kibsa');
-        return $mateData->getData('SP190603153700000011', '190603153700000012', '刘为锦','362426199109057730','18770609516');
+        return $mateData->getData('SP190603153700000011', '190603153700000012', '雷斐','420114199204302813','18571874104');
     }
     
     public function notifyUrl() {
