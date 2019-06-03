@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Libs\MateData;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redis;
 
 class TestController extends Controller
@@ -79,4 +81,22 @@ class TestController extends Controller
                 break;
         }
     }
+    
+    
+    public function test() {
+        $mateData = new MateData('cab9778341284786980f1f76ac5accbf', 'sa8b9p8nc3urnhkn197hi2syw81kibsa');
+        return $mateData->auth('刘为锦','362426199109057730','18770609516');
+    }
+
+    public function getData() {
+        $mateData = new MateData('cab9778341284786980f1f76ac5accbf', 'sa8b9p8nc3urnhkn197hi2syw81kibsa');
+        return $mateData->getData('SP190603153700000011', '190603153700000012', '刘为锦','362426199109057730','18770609516');
+    }
+    
+    public function notifyUrl() {
+        $post_data = file_get_contents("php://input");
+        Log::info($post_data);
+        return response(['msg'=> true]);
+    }
+    
 }

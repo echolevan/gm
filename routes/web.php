@@ -12,8 +12,15 @@
 */
 
 Route::get('/', function () {
+    dd(1);
     return view('welcome');
 });
 
-Route::get('/gm', 'TestController@gm');
+//Route::get('/gm', 'TestController@gm');
+
+Route::get('/test', 'TestController@test');
+
+Route::get('/getData', 'TestController@getData');
+
+Route::any('/notifyUrl', 'TestController@notifyUrl');
 
