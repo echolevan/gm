@@ -16,13 +16,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/gm', 'TestController@gm');
+Route::get('/gm', 'TestController@gm');
 
 //Route::get('/test', 'TestController@test');
 
-//Route::get('/getData', 'TestController@getData');
+Route::get('/getData', 'TestController@getData');
 
 //Route::any('/notifyUrl', 'TestController@notifyUrl');
 
-Route::any('/test2', 'TestController@test2');
+//Route::any('/test2', 'TestController@test2');
+
+Route::any('/server', 'AbcController@server');
+Route::any('/page', 'AbcController@page');
 
