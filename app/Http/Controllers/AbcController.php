@@ -8,18 +8,18 @@ use Illuminate\Support\Facades\Log;
 class AbcController extends Controller
 {
     public function server() {
-//        $data =
         $post_data = file_get_contents("php://input");
-        $params = json_decode($post_data, true);
-        Log::info('server::', $params);
+//        $params = json_decode($post_data, true);
+//        Log::info('server::', $params);
+        Log::info('server::'.$post_data);
     }
 
     public function page() {
         $post_data = file_get_contents("php://input");
-        $params = json_decode($post_data, true);
-        Log::info('server::', $params);
+//        $params = json_decode($post_data, true);
+        Log::info('page::'.$post_data);
 
-        var_dump($params);
+        var_dump($post_data);
     }
     
 }
